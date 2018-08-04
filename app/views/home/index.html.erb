@@ -1,0 +1,20 @@
+<%= form_with url: screenshot_path, method: :get, local: true do |form| %>
+  <div>
+    <label>URL</label>
+    <%= form.text_field :url, placeholder: 'https://yahoo.co.jp', required: 'true' %>
+    <small>スクリーンショットを作成したいURLを入力して下さい。</small>
+  </div>
+  <div>
+    <label>イメージ幅</label>
+    <%= form.number_field :width, placeholder: '1000', max: 1000, min: 50 %>
+    <small>option：出力されるイメージの幅をpx単位で入力して下さい。初期値は1000です。</small>
+  </div>
+  <div>
+    <label>option：イメージ高さ</label>
+    <%= form.number_field :height, placeholder: '1000', max: 1000, min: 50 %>
+    <small>option：出力されるイメージの高さをpx単位で入力して下さい。初期値は1000です。</small>
+  </div>
+  <div>
+    <%= form.submit 'スクリーンショットを作成する' %>
+  </div>
+<% end %>
