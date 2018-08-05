@@ -50,11 +50,11 @@ class ScreenshotCapture
   end
 
   def image_width
-    width && width.between?(50, MAX_WIDTH) ? width : MAX_WIDTH
+    width&.between?(50, MAX_WIDTH) ? width : MAX_WIDTH
   end
 
   def image_height
-    height && height.between?(50, MAX_HEIGHT) ? height : MAX_HEIGHT
+    height&.between?(50, MAX_HEIGHT) ? height : MAX_HEIGHT
   end
 
   def headless_chrome_options

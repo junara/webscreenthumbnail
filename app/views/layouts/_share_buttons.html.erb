@@ -1,0 +1,26 @@
+<div class="my-3 d-flex">
+  <%= link_to share_line, {class: "w-100"} do %>
+    <div class="d-flex flex-column align-items-center">
+      <span><%= icon('fab', 'line') %></span>
+      <span>LINE</span>
+    </div>
+  <% end %>
+  <%= link_to share_twitter, {class: "w-100"} do %>
+    <div class="d-flex flex-column align-items-center">
+      <span><%= icon('fab', 'twitter') %></span>
+      <span>Twitter</span>
+    </div>
+  <% end %>
+  <%= link_to share_facebook, {class: "w-100"} do %>
+    <div class="d-flex flex-column align-items-center">
+      <span><%= icon('fab', 'facebook') %></span>
+      <span>facebook</span>
+    </div>
+  <% end %>
+  <%= mail_to '', body: mail_body, subject: "web screenshot", class: 'w-100' do %>
+    <div class="d-flex flex-column align-items-center">
+      <span><%= icon('fas', 'envelope') %></span>
+      <span>メール</span>
+    </div>
+  <% end %>
+</div>

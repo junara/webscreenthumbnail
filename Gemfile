@@ -59,3 +59,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'selenium-webdriver'
 gem 'httpclient'
 gem 'mini_magick'
+
+# bootstrap4
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
+
+# font awesome
+gem 'font-awesome-sass', '~> 5.2.0'

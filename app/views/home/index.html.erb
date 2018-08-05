@@ -1,20 +1,35 @@
-<%= form_with url: screenshot_path, method: :get, local: true do |form| %>
-  <div>
-    <label>URL</label>
-    <%= form.text_field :url, placeholder: 'https://yahoo.co.jp', required: 'true' %>
-    <small>スクリーンショットを作成したいURLを入力して下さい。</small>
-  </div>
-  <div>
-    <label>イメージ幅</label>
-    <%= form.number_field :width, placeholder: '1000', max: 1000, min: 50 %>
-    <small>option：出力されるイメージの幅をpx単位で入力して下さい。初期値は1000です。</small>
-  </div>
-  <div>
-    <label>option：イメージ高さ</label>
-    <%= form.number_field :height, placeholder: '1000', max: 1000, min: 50 %>
-    <small>option：出力されるイメージの高さをpx単位で入力して下さい。初期値は1000です。</small>
-  </div>
-  <div>
-    <%= form.submit 'スクリーンショットを作成する' %>
-  </div>
-<% end %>
+<%= render partial: 'layouts/header' %>
+<div class="container">
+  <%= form_with url: screenshot_path, method: :get, local: true do |form| %>
+    <div class="my-5 form-group">
+      <label>URL</label>
+      <%= form.text_field :url, placeholder: 'https://yahoo.co.jp', required: 'true', class: 'form-control form-control-lg rounded-0' %>
+      <small>スクリーンショットを作成したいURLを入力して下さい。</small>
+    </div>
+    <div class="my-5 form-row">
+      <div class="col">
+        <label>option：イメージ幅</label>
+        <%= form.number_field :width, placeholder: '1000', max: 1000, min: 50, class: 'form-control form-control-lg rounded-0' %>
+        <small>出力されるイメージの幅をpx単位で入力して下さい。初期値は1000です。</small>
+      </div>
+      <div class="col">
+        <label>option：イメージ高さ</label>
+        <%= form.number_field :height, placeholder: '1000', max: 1000, min: 50, class: 'form-control form-control-lg rounded-0' %>
+        <small>出力されるイメージの高さをpx単位で入力して下さい。初期値は1000です。</small>
+      </div>
+    </div>
+    <div class="my-5">
+      <%= form.submit 'スクリーンショットを作成する', class: "btn-lg btn-primary btn-block rounded-0" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <hr class="mb-5">
+  <%= render partial: 'layouts/share_buttons' %>
+</div>
+
+<div class="container">
+  <hr class="my-5">
+  <%= render partial: 'layouts/footer' %>
+</div>
