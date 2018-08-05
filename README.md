@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Webscreenshotthumbnail
+* Get web screenshot by png format.
+* https://webscreenthumbnail.herokuapp.com/
 
-Things you may want to cover:
+## Environment
+* Ruby version 2.5.1
+* Rails version 5.2
 
-* Ruby version
+## How to run the test suite
 
-* System dependencies
+```
+docker-compose build
+docker-compose up
+docker-compouse run web rails rails db:migrate:reset
+```
 
-* Configuration
+access to http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
